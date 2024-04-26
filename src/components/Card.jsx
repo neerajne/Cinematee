@@ -1,7 +1,7 @@
 import{Link} from "react-router-dom";
  import Backup from"../assets/images/backup.png";
 export const Card = ({movie}) => {
-    const{ id , original_title , backdrop_path ,poster_path, overview } = movie;
+    const{ id , original_title ,poster_path, overview } = movie;
     const image_url = poster_path ?`https://image.tmdb.org/t/p/original/${poster_path}` : Backup ;
   return (
     
@@ -11,7 +11,7 @@ export const Card = ({movie}) => {
     </Link>
     
     <div className="p-5">
-        <Link to="{`/movies/${id}`}">
+    <Link to={`/movies/${id}`}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{original_title}</h5>
         </Link>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{overview}</p>
